@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Font Awesome cdn css -->
+    <script src="https://kit.fontawesome.com/b151e19e77.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./main.css">
+    <title>To Do List</title>
+</head>
+<body>
+
+    <header>
+        <h1>To Do List 2023</h1>
+    </header>
+    <form action="">
+        <div class="input-container">
+            <input type="text" class="todo-input" placeholder="Enter task">
+            
+            <select class="priority-select">
+                <option value="normal">Normal</option>
+                <option value="urgent">Urgent</option>
+                <option value="important">Important</option>
+            </select>
+            <input type="date" class="date-input">
+            
+            <button class="todo-button" type="submit">
+                <i class="fa-solid fa-circle-arrow-right"></i>
+            </button>
+        </div>
+        <div class="select">
+            <select name="todos" class="filter-todo">
+                <option value="all">View All</option>
+                <option value="completed">Done</option>
+                <option value="incomplete">Unfinished</option>
+            </select>
+        </div>
+    </form>
+
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
+    </div>
+
+    <script src="./main.js"></script>
+
+</body>
+</html>

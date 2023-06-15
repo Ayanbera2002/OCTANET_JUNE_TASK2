@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(119, 222, 128, 0.814);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+h1{
+    font-family: 'Bagel Fat One', cursive;
+    font-weight: 100;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header, 
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, 
+form button {
+    padding: 0.5rem;
+    margin-left: 10px;
+    font-size: 1.8rem;
+    border: none;
+    background: white;
+    border-radius: 2rem;
+}
+
+form button {
+    color: #FF8551;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    margin-left: 0.5rem;
+}
+
+form button:hover {
+    color: white;
+    background: #FF8551;
+}
+
+.fa-solid {
+    margin-top: 0.1rem;
+    margin-left: 2px;
+    margin-right: 2px;
+    font-size: larger;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-input{
+    text-align: center;
+  font-family: 'Montserrat', sans-serif;
+ margin-right: 8px;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    padding-left: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 2rem;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, 
+.complete-btn {
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.complete-btn {
+    background: #FF8551;
+}
+
+.trash-btn {
+    border-top-right-radius: 1.75rem;
+    border-bottom-right-radius: 1.75rem;
+    background: rgb(171, 171, 171);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, 
+.fa-check-circle {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.slide {
+    transform: translateX(10rem);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+select {
+    color:#FF8551;
+    width: 10rem;
+    height: 3.2rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background:#FF8551;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select::hover::after {
+    background: white;
+    color: #FF8551;
+}
+
+.priority-select {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #FF8551;
+    width: 8rem;
+    height: 3.1rem;
+    cursor: pointer;
+    padding: 1rem;
+    border: none;
+    border-radius: 50px;
+    appearance: none;
+    outline: none;
+    background: none;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    bottom: 4px;
+    
+}
+
+.priority-select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #FF8551;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.priority-select.select-focus {
+    box-shadow: 0 0 4px #FF8551;
+    outline: none;
+}
+
+.priority-select:hover::after {
+    background: white;
+    color: #FF8551;
+}
+.filter-todo{
+    font-family: 'Montserrat', sans-serif;
+}
+.date-input{
+    font-size: 24px;
+    color: #FF8551;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    bottom: 3PX;
+}
+.todo {
+    background: #f9f9f9;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .todo-item {
+    flex: 1;
+  }
+  
+  .priority {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .date {
+    font-size: 12px;
+    color: #888;
+    margin-right: 10px;
+  }
+  
+  .complete-btn,
+  .trash-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+    transition: color 0.3s ease;
+  }
+  
+  .complete-btn:hover,
+  .trash-btn:hover {
+    color: #e74c3c;
+  }
+  
+  .completed .todo-item {
+    text-decoration: line-through;
+    color: #888;
+  }
+
+@media only screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+    
+    header {
+      font-size: 1.2rem;
+    }
+    
+    form {
+      flex-direction: column;
+    }
+    
+    form input{
+        margin: 5px 0;
+      width: 100%;
+    }
+    form button{
+        margin: 0px 13rem;
+      width: 15%;
+      
+    }
+    .priority-select,
+    .date-input {
+      margin: 20px 0;
+      width: 40%;
+      margin-left: 29px;
+
+    }
+    
+    .todo-container {
+      align-items: flex-start;
+    }
+    
+    .todo {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .todo-item,
+    .priority,
+    .date {
+      font-size: 1rem;
+    }
+    
+    .complete-btn,
+    .trash-btn {
+      font-size: 1.2rem;
+      padding: 0.5rem;
+    }
+    
+    .select {
+      width: 35%;
+    
+    }
+  }
